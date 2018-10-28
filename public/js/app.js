@@ -47487,11 +47487,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             users: []
         };
     },
-
-    props: ['params'],
     mounted: function mounted() {
-        this.users = this.params;
-        console.log(this.users);
+        var _this = this;
+
+        axios.get('/api/users').then(function (response) {
+            // console.log(response)
+            _this.users = response.data;
+        });
     }
 });
 

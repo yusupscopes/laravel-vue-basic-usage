@@ -23,12 +23,11 @@
                 users: [],
             }
         },
-        props: [
-            'params'
-        ],
         mounted() {
-            this.users = this.params
-            console.log(this.users)
+            axios.get('/api/users').then((response) => {
+                // console.log(response)
+                this.users = response.data
+            })
         }
     }
 </script>

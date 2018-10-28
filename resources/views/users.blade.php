@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <users :params="{{$users->toJson()}}"></users>
+                    <users></users>
 
                 </div>
             </div>
