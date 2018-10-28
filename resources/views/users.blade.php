@@ -14,11 +14,22 @@
                         </div>
                     @endif
 
-                    <users></users>
+                    {{-- <users></users> --}}
+                    <br><br>
+                    <p class="text-center">@{{ test }}</p>
 
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            test: 'ini dari vue (bukan dari blade)'
+        }
+    })
+</script>
 @endsection
